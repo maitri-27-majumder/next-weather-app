@@ -9,7 +9,7 @@ const useWeather = () => {
 
   const dispatch = useDispatch();
 
-  const fetchWeather = async (id: String) => {
+  const fetchWeather = async (id: string) => {
     setLoading(true);
     setError("");
 

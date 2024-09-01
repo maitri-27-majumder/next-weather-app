@@ -3,17 +3,17 @@ import useWeather from "./useWeather";
 import Image from "next/image";
 
 type WeatherCardProps = {
-  temperature: Number;
-  humidity: Number;
-  wind_speed: Number;
-  wind_direction: Number;
-  rain_intensity: Number;
-  rain_accumulation: Number;
+  temperature: number;
+  humidity: number;
+  wind_speed: number;
+  wind_direction: number;
+  rain_intensity: number;
+  rain_accumulation: number;
 };
 
 const WeatherCard: React.FC<{
   weather: WeatherCardProps;
-  locality: String;
+  locality: string;
 }> = ({ weather, locality }) => {
   return (
     <div>

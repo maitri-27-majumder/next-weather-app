@@ -8,12 +8,12 @@ import Autosuggest from "react-autosuggest";
 import { usePathname, useRouter } from "next/navigation";
 
 type Locality = {
-  cityName: String;
-  localityName: String;
-  localityId: String;
-  latitude: Number;
-  longitude: Number;
-  device_type: String;
+  cityName: string;
+  localityName: string;
+  localityId: string;
+  latitude: number;
+  longitude: number;
+  device_type: string;
 };
 
 const SearchBar: React.FC = () => {
@@ -102,66 +102,4 @@ const SearchBar: React.FC = () => {
 
 export default SearchBar;
 
-// components/Autocomplete.tsx
-// import { useState, useEffect } from 'react';
 
-// type AutocompleteProps = {
-//   suggestions: string[];
-//   onSelect: (query: string) => void;
-// };
-
-// const SearchBar: React.FC<AutocompleteProps> = ({ suggestions, onSelect }) => {
-//   const [query, setQuery] = useState('');
-//   const [filteredSuggestions, setFilteredSuggestions] = useState<string[]>([]);
-//   const [showSuggestions, setShowSuggestions] = useState(false);
-
-//   useEffect(() => {
-//     if (query.length > 0) {
-//       const filtered = suggestions.filter((suggestion) =>
-//         suggestion.toLowerCase().startsWith(query.toLowerCase())
-//       );
-//       setFilteredSuggestions(filtered);
-//       setShowSuggestions(true);
-//     } else {
-//       setShowSuggestions(false);
-//     }
-//   }, [query, suggestions]);
-
-//   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-//     setQuery(e.target.value);
-//   };
-
-//   const handleClick = (suggestion: string) => {
-//     setQuery(suggestion);
-//     setFilteredSuggestions([]);
-//     setShowSuggestions(false);
-//     onSelect(suggestion);
-//   };
-
-//   return (
-//     <div className="relative w-full max-w-lg">
-//       <input
-//         type="text"
-//         value={query}
-//         onChange={handleChange}
-//         placeholder="Search for a city"
-//         className="border p-2 rounded-lg w-full"
-//       />
-//       {showSuggestions && filteredSuggestions.length > 0 && (
-//         <ul className="absolute z-10 w-full bg-white border rounded-lg mt-1">
-//           {filteredSuggestions.map((suggestion) => (
-//             <li
-//               key={suggestion}
-//               onClick={() => handleClick(suggestion)}
-//               className="p-2 cursor-pointer hover:bg-gray-200"
-//             >
-//               {suggestion}
-//             </li>
-//           ))}
-//         </ul>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default SearchBar;
