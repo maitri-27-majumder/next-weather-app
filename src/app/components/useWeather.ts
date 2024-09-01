@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setWeather } from "../../redux/weatherSlice";
 
+
 const useWeather = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -18,7 +19,7 @@ const useWeather = () => {
         `https://www.weatherunion.com/gw/weather/external/v0/get_locality_weather_data?locality_id=${id}`,
         {
           headers: {
-            "X-Zomato-Api-Key": "9df8b25b014e8b74e8f9ab6efc2a477e",
+            "X-Zomato-Api-Key": process.env.NEXT_PUBLIC_WEATHER_API_KEY,
           },
         }
       );

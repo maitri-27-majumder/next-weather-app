@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Weather App
+
+A simple weather application built with Next.js that allows users to get current weather information for any location. This app utilizes the Weather Union API for real-time weather data.
+
+## Features
+
+•⁠  ⁠🌤️ *Current Weather*: Get the latest weather information, including temperature, humidity, wind speed, and more.
+•⁠  ⁠🌍 *Location Search*: Search for weather information by city name.
+•⁠  ⁠🎨 *Responsive Design*: Fully responsive design that works on desktops, tablets, and mobile devices.
+
+## Demo
+
+Check out the live demo: [Weather App Demo](#) (https://next-weather-app-silk.vercel.app/)
+
+## Technologies Used
+
+•⁠  ⁠[Next.js](https://nextjs.org/) - React framework for server-side rendering and static site generation.
+•⁠  ⁠[React](https://reactjs.org/) - Frontend JavaScript library for building user interfaces.
+•⁠  ⁠[Weather Union API](https://www.weatherunion.com/) - API for fetching weather data.
+•⁠  ⁠[Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework for styling.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+•⁠  ⁠Node.js (>= 14.x) and npm installed on your machine.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.⁠ ⁠Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   git clone https://github.com/maitri-27-majumder/next-weather-app.git
+   cd next-weather-app
 
-## Learn More
+2.⁠ ⁠Insatll dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+   npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3.⁠ ⁠Create a .env.local file in the root directory and add your Weather Union API key
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   NEXT_PUBLIC_WEATHER_API_KEY=your_api_key_here
 
-## Deploy on Vercel
+4.⁠ ⁠Start the development server
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5.⁠ ⁠Open your browser and go to http://localhost:3000
+
+## Usage
+
+Enter the city name in the search bar to get the weather details for that location.

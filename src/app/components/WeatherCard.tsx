@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import useWeather from "./useWeather";
 import Image from "next/image";
+
+
 
 type WeatherCardProps = {
   temperature: number;
@@ -15,6 +17,7 @@ const WeatherCard: React.FC<{
   weather: WeatherCardProps;
   locality: string;
 }> = ({ weather, locality }) => {
+ 
   return (
     <div>
       <div
@@ -23,7 +26,9 @@ const WeatherCard: React.FC<{
       >
         <div className="flex text-white mt-4">
           <div className="ml-4">
-            <p className="text-3xl mb-4 sm:text-2xl md:text-2xl lg:text-3xl">{locality}</p>
+            <p className="text-3xl mb-4 sm:text-2xl md:text-2xl lg:text-3xl">
+              {locality}
+            </p>
             <p className="text-5xl font-extrabold flex items-center gap-3 md:text-4xl lg:text-5xl">
               <svg
                 width="32"
@@ -37,7 +42,7 @@ const WeatherCard: React.FC<{
                   fill="white"
                 />
               </svg>
-              {`${weather.temperature}°C`}
+              {`${weather.temperature || "--"}°C`}
             </p>
           </div>
         </div>
@@ -62,7 +67,7 @@ const WeatherCard: React.FC<{
                 fill="white"
               />
             </svg>
-            {`Humidity : ${weather.humidity} %`}
+            {`Humidity : ${weather.humidity || "--"} %`}
           </p>
           <p className="text-white flex font-semibold flex-col items-center gap-3 md:text-sm lg:text-xl">
             {" "}
@@ -80,7 +85,7 @@ const WeatherCard: React.FC<{
                 fill="white"
               />
             </svg>
-            {`Wind Speed : ${weather.wind_speed} km/h`}
+            {`Wind Speed : ${weather.wind_speed || "--"} km/h`}
           </p>
           <p className="text-white flex font-semibold flex-col items-center gap-3 md:text-sm lg:text-xl">
             <svg
@@ -97,7 +102,7 @@ const WeatherCard: React.FC<{
                 fill="white"
               />
             </svg>
-            {`Rain Intensity : ${weather.rain_intensity} mm/h`}
+            {`Rain Intensity : ${weather.rain_intensity || "--"} mm/h`}
           </p>
           <p className="text-white font-semibold flex flex-col items-center gap-3 md:text-sm lg:text-xl">
             <svg
@@ -114,10 +119,11 @@ const WeatherCard: React.FC<{
                 fill="white"
               />
             </svg>
-            {`Rain Accumulation : ${weather.rain_accumulation} mm`}
+            {`Rain Accumulation : ${weather.rain_accumulation || "--"} mm`}
           </p>
         </div>
       </div>
+      
     </div>
   );
 };
